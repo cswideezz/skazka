@@ -184,7 +184,7 @@ body {
 .hero {
     height: 100vh;
     /* Обязательно замените путь на реальное фото пляжа Пхукета */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/phuket-beach.jpg'); 
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/phuket-beach.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1963,4 +1963,5 @@ footer { background: var(--dark); color: white; padding: 60px 0 20px; }
         font-size: 2rem; 
         margin-bottom: 15px;
     }
+
 }
