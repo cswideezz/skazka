@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа - Skazka Phuket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="zkazka" src="/img/402124334_309372698530332_5634916391468818247_n.jpg" alt="Logo">
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">О нас</a></li>
+                    <li class="nav-item"><a href="destinations.html" class="nav-link">Экскурсии</a></li>
+                    <li class="nav-item"><a href="cart.html" class="nav-link">Корзина <span id="cart-count" class="cart-count">0</span></a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Оформление заказа</h1>
+            <p>Заполните данные для бронирования экскурсий</p>
+        </div>
+    </section>
+
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-layout">
+                <div class="checkout-form">
+                    <h2>Данные для бронирования</h2>
+                    <form id="checkout-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Имя *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Фамилия *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hotel">Отель проживания *</label>
+                            <input type="text" id="hotel" name="hotel" required placeholder="Название отеля и район">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Дополнительные пожелания</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Особые требования, аллергии и т.д."></textarea>
+                        </div>
+
+                        <h3>Способ оплаты</h3>
+                        <div class="payment-methods-checkout">
+                            <div class="payment-option">
+                                <input type="radio" id="checkout-online" name="paymentMethod" value="online" checked>
+                                <label for="checkout-online">
+                                    <span class="payment-icon">💳</span>
+                                    Банковская карта
+                                    <span class="payment-discount">(-5%)</span>
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="checkout-cash" name="paymentMethod" value="cash">
+                                <label for="checkout-cash">
+                                    <span class="payment-icon">💵</span>
+                                    Наличными гиду
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-agreement">
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            <label for="agreement">Я согласен с <a href="#" class="link">условиями бронирования</a> и <a href="#" class="link">политикой конфиденциальности</a> *</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-secondary">Подтвердить бронирование</button>
+                    </form>
+                </div>
+
+                <div class="order-summary">
+                    <div class="summary-card">
+                        <h3>Ваш заказ</h3>
+                        <div id="order-items" class="order-items"></div>
+                        <div class="summary-totals">
+                            <div class="summary-line">
+                                <span>Стоимость:</span>
+                                <span id="order-subtotal">0 ฿</span>
+                            </div>
+                            <div class="summary-line discount">
+                                <span>Скидка:</span>
+                                <span id="order-discount">-0 ฿</span>
+                            </div>
+                            <div class="summary-line total">
+                                <span>Итого:</span>
+                                <span id="order-total">0 ฿</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="support-info">
+                        <h4>Поддержка 24/7</h4>
+                        <p>📞 +66990204444 (UZB, ENG)</p>
+                        <p>📞 +66994184444 (KAZ, RUS)</p>
+                        <p>💬 WhatsApp доступен круглосуточно</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно успешного заказа -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-success-icon">✅</div>
+            <h3>Бронирование подтверждено!</h3>
+            <p>Ваши экскурсии успешно забронированы. В ближайшее время с вами свяжется наш менеджер для уточнения деталей.</p>
+            <div class="modal-actions">
+                <button id="modal-close" class="btn">Вернуться на главную</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Skazka Phuket</h3>
+                    <p>Сказки Воплощаются в Реальность!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="destinations.html">Экскурсии</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>+66990204444 (UZB, ENG)</p>
+                    <p>+66994184444 (KAZ, RUS)</p>
+                    <p>info@skazka-phuket.ru</p>
+                    <p>Пхукет, Чалонг</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Skazka Phuket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Экскурсии на Пхукете - Skazka</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                class="zkazka"
+                src="/img/402124334_309372698530332_5634916391468818247_n.jpg"
+                alt="Logo"
+              />
+            </a>
+          </div>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a href="destinations.html" class="nav-link active">Экскурсии</a>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link"
+                >Корзина <span id="cart-count" class="cart-count">0</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Контакты</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Каталог экскурсий</h1>
+        <p>Лучшие приключения на Пхукете и соседних островах</p>
+      </div>
+    </section>
+
+    <section class="destinations-filter">
+      <div class="container">
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="sea">Морские прогулки</button>
+          <button class="filter-btn" data-filter="land">Суша и Джунгли</button>
+          <button class="filter-btn" data-filter="evening">Вечерние шоу</button>
+          <button class="filter-btn" data-filter="vip">Индивидуально</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations-list">
+      <div class="container">
+        <div class="destinations-grid">
+          <div class="destination-card" data-category="sea">
+            <div
+              class="destination-image"
+              style="
+                background-image: url('/img/b5d9a056765a5ef83c4887e701950df4eb13305c_comp.jpg');
+              "
+            ></div>
+            <div class="destination-info">
+              <h3>Острова Пхи-Пхи + Бамбу</h3>
+              <p>
+                Полный день: снорклинг, бухта Майя Бэй, пляж обезьян и обед на
+                острове.
+              </p>
+              <div class="destination-meta">
+                <span class="destination-price">1 800 ฿</span>
+                <span class="destination-duration">Весь день</span>
+              </div>
+              <button class="btn btn-small">Забронировать</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-category="sea">
+            <div
+              class="destination-image"
+              style="
+                background-image: url('/img/5ccf7494bedfef96564a30a514c939744a42f643_comp.jpg');
+              "
+            ></div>
+            <div class="destination-info">
+              <h3>Остров Джеймса Бонда</h3>
+              <p>
+                Прогулка на каноэ по пещерам, деревня морских цыган и знаменитая
+                скала.
+              </p>
+              <div class="destination-meta">
+                <span class="destination-price">1 600 ฿</span>
+                <span class="destination-duration">Весь день</span>
+              </div>
+              <button class="btn btn-small">Забронировать</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-category="land">
+            <div
+              class="destination-image"
+              style="background-image: url('/img/madee-8.jpg')"
+            ></div>
+            <div class="destination-info">
+              <h3>Заповедник Слонов</h3>
+              <p>
+                Этичное общение со слонами: купание, кормление и грязевые ванны
+                (без катания).
+              </p>
+              <div class="destination-meta">
+                <span class="destination-price">2 500 ฿</span>
+                <span class="destination-duration">4 часа</span>
+              </div>
+              <button class="btn btn-small">Забронировать</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-category="land">
+            <div
+              class="destination-image"
+              style="background-image: url('/img/Laptop.jpg')"
+            ></div>
+            <div class="destination-info">
+              <h3>Hanuman World (Зиплайн)</h3>
+              <p>Полет над джунглями на канатах. Экстрим и невероятные виды.</p>
+              <div class="destination-meta">
+                <span class="destination-price">от 1 900 ฿</span>
+                <span class="destination-duration">3 часа</span>
+              </div>
+              <button class="btn btn-small">Забронировать</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-category="evening">
+            <div
+              class="destination-image"
+              style="background-image: url('/img/images.jpg')"
+            ></div>
+            <div class="destination-info">
+              <h3>Carnival Magic</h3>
+              <p>Новейший парк иллюминаций и грандиозное парад-шоу.</p>
+              <div class="destination-meta">
+                <span class="destination-price">2 600 ฿</span>
+                <span class="destination-duration">Вечер</span>
+              </div>
+              <button class="btn btn-small">Забронировать</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-category="vip">
+            <div
+              class="destination-image"
+              style="background-image: url('/img/lagoon-450-thaicharters.jpg')"
+            ></div>
+            <div class="destination-info">
+              <h3>Аренда Катамарана</h3>
+              <p>
+                Частный круиз на закате с шампанским и фруктами только для вашей
+                компании.
+              </p>
+              <div class="destination-meta">
+                <span class="destination-price">от 15 000 ฿</span>
+                <span class="destination-duration">4-8 часов</span>
+              </div>
+              <button class="btn btn-small">Забронировать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">Частые вопросы (FAQ)</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              Как забронировать экскурсию?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Вы можете оставить заявку на сайте или написать нам в WhatsApp.
+                Предоплата не требуется для большинства групповых экскурсий,
+                оплата происходит при посадке в автобус.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Входит ли страховка в стоимость?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Да, в стоимость всех наших экскурсий включена полная
+                туристическая страховка. Вам нужно будет лишь предоставить фото
+                паспортов перед выездом.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Какую валюту брать с собой?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                В Таиланде принимают только тайские баты (THB). Мы рекомендуем
+                менять доллары или евро в обменниках, либо снимать наличные в
+                банкоматах.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Skazka Phuket</h3>
+            <p>Сказки Воплощаются в Реальность!</p>
+          </div>
+          <div class="footer-section">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="destinations.html">Экскурсии</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Контакты</h4>
+            <p style="text-decoration: none">
+              +66990204444 (UZB, ENG) <br />
+              +66994184444 (KAZ, RUS)
+            </p>
+            <p style="text-decoration: none">info@skazka-phuket.ru</p>
+            <p>Пхукет, Чалонг</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; Skazka Phuket. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

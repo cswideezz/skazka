@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина - Skazka Phuket</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                class="zkazka"
+                src="/img/402124334_309372698530332_5634916391468818247_n.jpg"
+                alt="Logo"
+              />
+            </a>
+          </div>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a href="destinations.html" class="nav-link">Экскурсии</a>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link active"
+                >Корзина <span id="cart-count" class="cart-count">0</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Корзина туров</h1>
+          <p>Проверьте выбранные экскурсии и перейдите к оформлению</p>
+        </div>
+      </section>
+
+      <section class="cart-section">
+        <div class="container">
+          <div class="cart-layout">
+            <div class="cart-items">
+              <h2>Выбранные экскурсии</h2>
+              <div id="cart-empty" class="cart-empty">
+                <div class="empty-cart-icon">🛒</div>
+                <h3>Корзина пуста</h3>
+                <p>Добавьте экскурсии из каталога</p>
+                <a href="destinations.html" class="btn">Перейти к экскурсиям</a>
+              </div>
+              <div
+                id="cart-items-container"
+                class="cart-items-container hidden"
+              ></div>
+            </div>
+
+            <div class="cart-summary">
+              <div class="summary-card">
+                <h3>Итоги заказа</h3>
+                <div class="summary-line">
+                  <span>Количество экскурсий:</span>
+                  <span id="summary-count">0</span>
+                </div>
+                <div class="summary-line">
+                  <span>Общая стоимость:</span>
+                  <span id="summary-total">0 ฿</span>
+                </div>
+                <div class="summary-line discount">
+                  <span>Скидка (при оплате онлайн):</span>
+                  <span id="summary-discount">-0 ฿</span>
+                </div>
+                <div class="summary-line total">
+                  <span>К оплате:</span>
+                  <span id="summary-final">0 ฿</span>
+                </div>
+                <button id="checkout-btn" class="btn btn-secondary" disabled>
+                  Перейти к оплате
+                </button>
+                <p class="summary-note">
+                  * При онлайн-оплате действует скидка 5%
+                </p>
+              </div>
+
+              <div class="payment-methods">
+                <h4>Способы оплаты</h4>
+                <div class="payment-options">
+                  <div class="payment-option">
+                    <input
+                      type="radio"
+                      id="online"
+                      name="payment"
+                      value="online"
+                      checked
+                    />
+                    <label for="online">
+                      <span class="payment-icon">💳</span>
+                      Онлайн оплата
+                      <span class="payment-discount">(-5%)</span>
+                    </label>
+                  </div>
+                  <div class="payment-option">
+                    <input type="radio" id="cash" name="payment" value="cash" />
+                    <label for="cash">
+                      <span class="payment-icon">💵</span>
+                      Наличными гиду
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Skazka Phuket</h3>
+            <p>Сказки Воплощаются в Реальность!</p>
+          </div>
+          <div class="footer-section">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="destinations.html">Экскурсии</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>+66990204444 (UZB, ENG)</p>
+            <p>+66994184444 (KAZ, RUS)</p>
+            <p>info@skazka-phuket.ru</p>
+            <p>Пхукет, Чалонг</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; Skazka Phuket. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
