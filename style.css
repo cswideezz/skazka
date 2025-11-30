@@ -190,7 +190,7 @@ body {
   height: calc(100vh - var(--nav-height));
   min-height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url('/img/beautiful-mountains-ratchaprapha-dam-khao-sok-national-park-surat-thani-province-thailand.jpg');
+    url('img/beautiful-mountains-ratchaprapha-dam-khao-sok-national-park-surat-thani-province-thailand.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -885,7 +885,6 @@ footer {
   }
 }
 
-
 /* Корзина */
 .cart-count {
     background: var(--secondary);
@@ -1339,7 +1338,6 @@ footer {
         padding: 30px 20px;
     }
 }
-
 
 /* Корзина - исправленные стили */
 .cart-section {
